@@ -17,16 +17,17 @@ BasicGame.Boot.prototype = {
         this.game.scale.pageAlignHorizontally = true;
         this.game.scale.pageAlignVertically = true;
 
-        this.scale.setResizeCallback(this.resizeFunc, this);
+        //        this.scale.setResizeCallback(this.resizeFunc, this);
         this.game.scale.onSizeChange.add(this.onSizeChange, this);
     },
 
     onSizeChange: function () {
         //        console.log("game state resize");
-        this.game.state.resize();
+        //        this.game.state.resize();
     },
     resizeFunc: function () {
-        console.log("boot resize");
+        //        console.log("boot resize");
+        this.game.state.resize();
     },
 
     preload: function () {

@@ -1,7 +1,7 @@
 window.onload = function () {
 
     /** Config part */
-    var FIXED_SIZE = 600;
+    var FIXED_SIZE = 640;
     var FIXED_MEASURE = 'Height';
 
     /** Name maping */
@@ -28,7 +28,6 @@ window.onload = function () {
     window.width = navigator.isCocoonJS ? window.innerWidth : screen.CANVAS_WIDTH;
     window.height = navigator.isCocoonJS ? window.innerHeight : screen.CANVAS_HEIGHT;
 
-//    var game = module.exports = new Phaser.Game(screen.CANVAS_WIDTH, screen.CANVAS_HEIGHT, Phaser.CANVAS, 'game');
     var game = new Phaser.Game(screen.CANVAS_WIDTH, screen.CANVAS_HEIGHT, Phaser.CANVAS, 'game_div');
     game.state.add('boot', BasicGame.Boot);
     game.state.add('preload', BasicGame.Preload);
